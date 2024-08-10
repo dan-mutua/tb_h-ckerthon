@@ -25,7 +25,7 @@ def main(driver, wait):
         checkout = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "#hlb-view-cart-btn")))
         checkout.click()
 
-        print("Successfully added item to cart and proceeded to checkout (simulated).")
+        print("item added to cart succesfully proceed to checkout")
         return True
 
     except (NoSuchElementException, TimeoutException) as e:
@@ -33,7 +33,7 @@ def main(driver, wait):
         return False
 
 if __name__ == "__main__":
-    driver = webdriver.Chrome("C:\Users\danmu\Downloads\chromedriver-win64")
+    driver = webdriver.Chrome(r'user-data-dir=C:\Users\danmu\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Google Chrome.lnk')
     driver.implicitly_wait(10)  
 
     wait = WebDriverWait(driver, 10)
