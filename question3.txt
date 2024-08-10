@@ -1,0 +1,7 @@
+retrieve all users who registered in the last 30days
+
+SELECT * FROM Users >= current_date -30 ;
+
+SELECT * FROM Users WHERE Email % '@example.com'
+
+UPDATE Users SET 'Email' = test@yahoo,com' WHERE 'UserId' = 22;
